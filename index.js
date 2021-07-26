@@ -61,11 +61,11 @@ function routeProtect(req, res, next) {
 }
 
 app.get("/",(req, res)=>{
-    res.render('index.ejs',{length:lengthParent})
+    res.render('index',{length:lengthParent})
 })
 
 app.get("/login",(req, res)=>{
-    res.render('login.ejs')
+    res.render('login')
     // console.log(users)
     // msgs === ['hheheh'] ? console.log(true) : console.log("not true")
 })
@@ -94,11 +94,8 @@ app.get("/logout", (req,res)=>{
     lengthParent = ""
     res.redirect("/")
 })
-app.get("/test", (req,res)=>{
-    res.render("test.ejs")
-})
 app.get("/foods", (req, res) =>{
-    res.render('foods.ejs', {data: foodDatabase, msg, length: lengthParent})
+    res.render('foods', {data: foodDatabase, msg, length: lengthParent})
     // console.log(foodDatabase.length)
     // console.log(req.session.name)
 })
@@ -116,7 +113,7 @@ app.get("/food/:id", (req, res) =>{
            console.log("not found")
             // console.log(msgs)
         }
-    res.render('details.ejs', {data: food, length: lengthParent})
+    res.render('details', {data: food, length: lengthParent})
 })
 
 app.get("/food/add/:id", (req, res) =>{
@@ -149,10 +146,10 @@ app.get("/food/add/:id", (req, res) =>{
 
 })
 app.get("/register", (req, res) =>{
-    res.render('Registration-page.ejs')
+    res.render('Registration-page')
 })
 app.post("/register", (req, res) =>{
-    res.render('Registration-page.ejs')
+    res.render('Registration-page')
     console.log(req.body)
     var users = foodDatabase.find(c=> 
         c.foodId === req.params.id)
