@@ -65,7 +65,7 @@ app.get("/",(req, res)=>{
 })
 
 app.get("/login",(req, res)=>{
-    res.render('login')
+    res.render('Login')
     // console.log(users)
     // msgs === ['hheheh'] ? console.log(true) : console.log("not true")
 })
