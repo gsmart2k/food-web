@@ -1,7 +1,6 @@
 const express = require("express")
 const session = require("express-session")
 var app = express();
-app.set('trust proxy', 1)
 app.use(session({
     secret:"Some texts",
     resave: false,
@@ -62,7 +61,7 @@ function routeProtect(req, res, next) {
 }
 
 app.get("/",(req, res)=>{
-    res.render('login.ejs',{length:lengthParent})
+    res.render('index.ejs',{length:lengthParent})
 })
 
 app.get("/login",(req, res)=>{
