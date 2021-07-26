@@ -62,7 +62,7 @@ function routeProtect(req, res, next) {
 }
 
 app.get("/",(req, res)=>{
-    res.render('index.ejs',{length:lengthParent})
+    res.render('login.ejs',{length:lengthParent})
 })
 
 app.get("/login",(req, res)=>{
