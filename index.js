@@ -7,6 +7,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }))
+const PORT = process.env.PORT || 3000
 
 var uses = [
     {id:'1', name:"ogunrinade", password:"gbolahan", cartContent:[]},
@@ -208,6 +209,6 @@ app.get("/cart/delete/:id", (req,res)=>{
 
 
 
-app.listen('3000', ()=>{
+app.listen(PORT, ()=>{
     console.log("listening to port 3000")
 })
