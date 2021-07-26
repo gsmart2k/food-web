@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/cart.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+<body>
+    <%- include('header.ejs') %>
+        <p class="section-tag">Cart</p>
+    
+        <% if(validate === 0){ %>
+        <p class="empty">You Have Nothing in your cart ! <a href="/foods">Start Shopping !</a></p>
+        <% }else { %>
+        <div class="container">
+        <% data.forEach(user =>{ %>
+           <% user.cartContent.forEach(carts =>{ %>
+               <div class="cart-item">
+                   <div class="image">
+                       <img class="cart-image" src=<%= carts.foodImage %> alt="">
+                    </div>
+                    <div class="cart-item-name-price">
+                        <p><%= carts.foodName || 0 %></p>
+                        <p>$<%= carts.price %></p>
+                    </div>
+                    <div class="inc-dec-btns">
+                        <a href="/inc/<%= user.id %>"><button>+</button></a>
+                        <span><%= carts.foodQty %></span>
+                        <a href="/dec/<%= user.id %>"><button>-</button></a>
+                    </div>
+                    <div class="size">
+                        <a class="del_link" href="/cart/delete/<%= carts.foodId %>"><p class="delete-cart-item-btn">x</p></a>
+                    </div>
+                </div>
+                <% }) %>
+                <% }) %>
+    </div>
+    <% } %>
+    <div class="cart-items-total-price">
+        <p>Total:</p>
+        <p>$<%= cartTotal %></p>
+    </div>
+         <button class="pay-btn">Proceed To Payment</button> 
+</body>
+<script>
+    //     var parent;
+    //     console.log(del);
+    //     for (let i = 0; i < del.length; i++) {
+        //         const element = del[i];
+        //         var parent = element.parentElement;
+        //         element.addEventListener("click", deleteParent)
+        
+        //     }
+        // function deleteParent(e) {
+            //         e.target.parentElement.parentElement.remove()
+            //     }
+        // var empty = document.querySelector(".empty")
+        // var control = document.querySelector(".control")
+        // var paybtn = document.querySelector(".payment-btn")
+
+        // if(control.textContent === "You"){
+        //     empty.classList.remove("hide")
+        // }else{
+        //     empty.classList.add("hide")
+        // }
+
+</script>
+</html>

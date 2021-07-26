@@ -1,0 +1,60 @@
+*{
+    box-sizing:border-box;
+    margin:0em;
+    padding:0em;
+}
+body{
+    padding:1em;
+    background-image: url("../../images/hero\ image\ lighten.png");
+    background-repeat: no-repeat;
+    background-size: 40em;
+}
+.logo{
+    width:100%;
+    margin:.5em auto;
+    text-align: center;
+}
+.section-tag{
+    font-size: 1.5em;
+    font-family: futura Md bt;
+    border-bottom: 1px solid #000;
+    margin:1em 0 1em 0;
+}
+.input-fields{
+    padding:1.5em;
+    border-radius:.3em;
+    background: none;
+    border:2px solid orange;
+    margin:1em;
+    width:100%;
+    margin:.2em auto;
+}
+.login{
+    padding:1.5em;
+    width:100%;
+    margin:1em auto;
+    background: #000;
+    border-radius: 1em;
+    color:#fff;
+}
+.bottom-tag{
+    text-align: center;
+    font-size: 1em;
+}
+.bottom-tag > a{
+    font-weight: bold;
+}
+.click{
+    animation: btnanim 1s ease-in;
+}
+
+@keyframes btnanim {
+    from{
+        background:black;
+        clip-path:circle(0%);
+    }
+    to{
+        background:crimson;
+        clip-path:circle(100%);
+    }
+}

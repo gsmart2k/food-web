@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin:0em;
+    padding:0em;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cart-icon-link{
+    justify-self: flex-end;
+}
+.tagandsearch{
+    display: flex;
+    flex-direction: row;
+    padding:.5em;
+    justify-content: space-between;
+}
+.page-tag{
+    font-size:1.5em;
+    font-family: futura md bt;
+    margin:.5em 0 .5em .3em;
+    width:13%;
+}
+.hide{
+    display: none;
+}
+.search-icon-div{
+    width:20%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background:none;
+    outline:none;
+    border:none;
+    padding-left: .5em;
+    border-left: .5px solid #aaa;
+}
+.searchandbtn{
+    display: flex;
+    flex-direction: row;
+    width:78%;
+    border-radius: 1em;
+    border: orange 1px solid;
+    margin:0 0 0 1em;
+}
+.search-icon{
+    width:90%;
+    justify-self: flex-start;
+}
+.food-search{
+    padding:0 .6em 0em .6em;
+    justify-self: flex-end;
+    outline: none;
+    border:none;
+    width:78%;
+}
+.eat-logo{
+    width:20%;
+    justify-items: center;
+}
+.ham{
+    width:15%;
+}
+.cartandham{
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.recent-foods{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.foods{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:  .7em 0;
+    margin: 0 auto;
+}
+.food-image{
+    width: 11em;
+    height: 12em;
+}  
+.food-name-price{
+    display: flex;
+    flex-direction: row;
+    margin:.5em;
+}
+ 
+.food-name{
+    padding:.3em;
+}
+.food-price{
+    padding:.3em;
+}
+.addtocart{
+    padding:.7em;
+    font-weight: bold;
+    margin: 0 auto;
+    background-color: #be5e02;
+    border: none;
+    outline: none;
+    width: 100%;
+    color:#fff;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat it | Foods</title>
+    <link rel="stylesheet" href="../CSS/food.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <div class="tagandsearch">
+        <p class="page-tag">Foods</p>
+            <form class="searchandbtn" method="POST" action="">
+                <input name="searchVal" value="" placeholder="Search for a food" type="text" class="food-search">
+                    <button class="search-icon-div">Search</button>
+            </form>
+    </div>
+    <div class="foods">
+        <p class="alert-tag"><%= msg %></p>
+        <div class="recent-foods">
+            <% data.forEach(food => { %>
+                <div class="foods">
+                   <a href="/food/<%= food.foodId %>"><img class="food-image" src=<%= food.foodImage %> alt=""></a>
+                    <div class="food-name-price">
+                        <p class="food-name"><%= food.foodName %></p>
+                        <p class="food-price"><%= food.price %></p>
+                    </div>
+                    <a href="/food/add/<%= food.foodId %>"><button class="addtocart">ADD TO CART</button></a>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+<script src="../JS/main.js"></script>
+<script>
+  var alertTag = document.querySelector(".alert-tag")
+
+  alertTag.classList.add("hide")
+  if(alertTag.textContent === "inCart"){
+      alert("Food already in Cart")
+    }else{
+        console.log("hello")
+  }  
+</script>
+</html>

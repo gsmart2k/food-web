@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0em;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.eat-logo{
+    width:20%;
+    justify-items: center;
+}
+.ham{
+    width:15%;
+}
+.empty{
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+    margin:0 0 3em 0;
+}
+.hide{
+    display: none;
+}
+
+.cartandham{
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.section-tag{
+    font-size: 2em;
+    font-family: futura Md bt;
+    border-bottom: 1px solid #000;
+    margin:.5em;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+    width:95%;
+}
+.image{
+    width:30%;
+    padding:.3em;
+}
+.cart-image{
+    width:90px;
+    height:90px;
+}
+.cart-item{
+    display: flex;
+    flex-direction: row;
+    box-shadow: -1px 4px 7px 1px #000;
+    margin:.5em 0 .5em 0;
+    background: rgb(236, 230, 230);
+}
+.del_link{
+    text-decoration: none;
+    color:#000;
+}
+.cart-item-name-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: center;
+    align-content: center;
+    font-weight: bold;
+    margin:0 auto;
+    width:30%;
+}
+.inc-dec-btns{
+    display: flex;
+    flex-direction: row;
+    width:19%;
+}
+.inc-dec-btns > button{
+    display: flex;
+    flex-direction: row;
+    background: none;
+    border:none;
+    outline: none;
+    align-items: center;
+    justify-items: center;
+    margin:.7rem;
+    font-weight: bolder;
+    font-size: 1em;
+    color:#be5e02;
+}
+span{
+    align-self: center;
+    font-weight: bolder;
+    font-size: 1em;
+}
+.size{
+    display: flex;
+    justify-content: flex-end;
+    justify-self: flex-end;
+    width:16%;
+    padding:0 .3em 0 0;
+}
+.delete-cart-item-btn{
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: futura Bk Bt;
+    cursor: pointer;
+}
+.cart-items-total-price{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+}
+.cart-items-total-price > p{
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+    margin:.2em;
+
+}
+.pay-btn{
+    display: block;
+    background: #be5e02;
+    padding:.5em;
+    text-align: center;
+    font-size: 2em;
+    font-family: futura Md bt;
+    width:90%;
+    margin:0 auto;
+    color: #fff;
+}
